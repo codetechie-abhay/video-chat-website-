@@ -1,0 +1,143 @@
+.chat-col {
+    right: -100vw;
+    bottom: 0;
+    top: 40.5px;
+    z-index: 1000;
+    position: fixed;
+    color: #333; /* Changed text color for better readability */
+    padding: 20px; /* Simplified padding */
+    min-height: 100vh;
+    background-color: #fff; /* Changed background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+    transition: right 0.3s ease; /* Moved transition to the main selector */
+}
+
+.chat-col.chat-opened {
+    right: 0;
+}
+
+#chat-messages {
+    height: 60vh; /* Reduced height for better visibility */
+    overflow-y: auto;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    scrollbar-width: thin; /* Adjusted scrollbar width */
+    scrollbar-color: #888 transparent; /* Adjusted scrollbar color */
+}
+
+#chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+.chat-box {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    border: none; /* Removed border */
+    border-top: 1px solid #ddd; /* Added subtle top border */
+    font-size: 14px; /* Increased font size for better readability */
+    width: calc(100% - 10px); /* Adjusted width to fit padding */
+    padding: 10px; /* Simplified padding */
+}
+
+.chat-box::placeholder {
+    color: #aaa; /* Adjusted placeholder color */
+}
+
+.chat-row {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main {
+    padding-top: 20px; /* Reduced padding top */
+}
+
+.remote-video {
+    max-width: 100%; /* Ensured videos don't overflow */
+    height: auto;
+}
+
+.remote-video-controls {
+    display: none; /* Hide controls by default */
+}
+
+.remote-video:hover + .remote-video-controls,
+.remote-video-controls:hover {
+    display: block; /* Show controls on hover */
+}
+
+.local-video {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 15vw;
+    max-width: 200px; /* Ensured max width */
+}
+
+.mirror-mode {
+    transform: scaleX(-1); /* Removed vendor prefixes */
+}
+
+.sender-info {
+    margin-top: 5px;
+}
+
+.msg {
+    padding: 10px; /* Added padding for messages */
+    margin-bottom: 10px; /* Added margin between messages */
+    border-radius: 6px; /* Added border radius */
+}
+
+.btn-no-effect:focus {
+    outline: none; /* Removed outline on focus */
+}
+
+.very-small {
+    font-size: 10px; /* Increased font size for better readability */
+}
+
+.record-option {
+    height: 150px; /* Reduced height for better display */
+    border-radius: 8px; /* Increased border radius */
+    cursor: pointer;
+    padding: 20px; /* Increased padding for better clickability */
+}
+
+.custom-modal {
+    display: none; /* Hide modal by default */
+}
+
+.custom-modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+    width: 80%;
+    max-width: 400px; /* Limited maximum width */
+}
+
+@media only screen and (max-width: 767px) {
+    .chat-col {
+        right: -100vw;
+        width: 100vw;
+        z-index: 9999;
+        transition: right 0.3s ease;
+        top: 47px;
+        padding: 10px; /* Reduced padding */
+    }
+
+    .chat-box {
+        bottom: 70px; /* Adjusted bottom position */
+    }
+
+    .local-video {
+        width: 40vw;
+        max-width: 250px; /* Ensured max width */
+    }
+}
