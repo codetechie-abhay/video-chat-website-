@@ -1,3 +1,8 @@
+
+*{
+    font-weight: 300;
+    font-family: monospace;
+}
 .chat-col {
     right: -100vw;
     bottom: 0;

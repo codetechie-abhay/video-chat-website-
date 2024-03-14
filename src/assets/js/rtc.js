@@ -1,6 +1,6 @@
 /**
- * @author Amir Sanni <amirsanni@gmail.com>
- * @date 6th January, 2020
+ * @author Abhay Nautiyal <abhaynautiyal.dev@gmail.com>
+ * @date 6th March, 2024
  */
 import h from './helpers.js';
 
